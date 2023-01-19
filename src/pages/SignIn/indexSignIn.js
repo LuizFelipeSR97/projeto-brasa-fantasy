@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import logo from '../../assets/images/logo-fantasy.png'
+import logo from '../../assets/images/logo-fantasy.png';
 
 export default function SignInPage() {
 
     const userExists = true;
     const [errorText, setErrorText] = useState('');
     const navigate = useNavigate();
+    console.log(logo)
 
     function handleSubmit(e) {
 
@@ -50,7 +51,7 @@ export default function SignInPage() {
 }
 
 const Page = styled.div`
-    background-color: #0066b5;
+    background-color: #62A8F8;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -59,28 +60,28 @@ const Page = styled.div`
 `;
 
 const Content = styled.div`
-    background-color: #E8E8E8;
-    width: 600px;
+    background-color: #f2efef;
+    width: 500px;
     height: 800px;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 20px;
+    box-shadow: 0px 4px 24px #002680;
 
     img{
         width: 300px;
     }
 
     a:-webkit-any-link {
-        margin-bottom: 100px;
+        margin: 40px 0;
+        margin-bottom: 40px;
     }
 `;
 
 const Form = styled.form`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     input{
@@ -134,8 +135,8 @@ const ErrorSpace = styled.div`
     text-align: center;
     margin-top: 20px;
     width: 450px;
-    height: 130px;
-    color: black;
+    height: 160px;
+    color: #515151;
     margin: 20px 0;
     font-size: 14px;
 `;
