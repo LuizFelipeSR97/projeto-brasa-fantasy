@@ -5,10 +5,11 @@ import logo from '../../assets/images/logo-fantasy.png';
 
 export default function SignInPage() {
 
+    
     const userExists = true;
     const [errorText, setErrorText] = useState('');
     const navigate = useNavigate();
-    console.log(logo)
+    console.log(logo);
 
     function handleSubmit(e) {
 
