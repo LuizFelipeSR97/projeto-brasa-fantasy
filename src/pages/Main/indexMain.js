@@ -38,7 +38,8 @@ export default function MainPage() {
                     <ContentBar>
                         <img src={logo} onClick={()=>navigate('/')}/>
                         <div className='button'>
-                            <div className="team">Time</div>
+                            <div className="team" onClick={()=>navigate('/my-team')}>Time</div>
+                            <div className="bar"/>
                             <ion-icon name="chevron-down-outline"/>
                         </div>
                         <input name='searchBar' onChange={handleSearch}/>
@@ -209,6 +210,13 @@ const ContentBar = styled.div`
         width: 150px;
         overflow-x: hidden;
         overflow-y: hidden;
+        cursor: pointer;
+    }
+
+    .bar{
+        height: 25px;
+        background-color: #D3D3D3;
+        width: 1px;
     }
 `;
 
@@ -395,18 +403,21 @@ const New = styled.div`
         font-weight: 700;
         margin-left: 15px;
         margin-top: 15px;
+        color: #003cc9;
     }
 
     h2{
         font-size: 18px;
         margin-left: 15px;
-        margin-top: 10px;
+        margin-top: 20px;
+        color: #000000;
     }
 
     h3{
         font-size: 13px;
         margin-left: 15px;
-        margin-top: 10px;
+        margin-top: 20px;
+        color: #777777;
     }
 `;
 
@@ -465,5 +476,6 @@ const ContentBottomBar = styled.div`
         margin-right: 20px;
         margin-bottom: 10px;
         display: flex;
+        cursor: pointer;
     }
 `;
